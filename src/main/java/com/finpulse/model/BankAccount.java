@@ -7,6 +7,9 @@ public class BankAccount {
     private AccountType type;
     private AccountStatus status;
 
+    public BankAccount() {
+
+    }
 
     public long getAccountId() {
         return accountId;
@@ -69,5 +72,35 @@ public class BankAccount {
                 ", type=" + type +
                 ", status=" + status +
                 '}';
+    }
+    public static class AccountBuilder {
+        private BankAccount bankAccount=new BankAccount();
+
+        public static AccountBuilder builder(){
+            return new AccountBuilder();
+        }
+        public AccountBuilder accountId(Long id){
+            bankAccount.accountId= id;
+            return this;
+        }
+        public AccountBuilder currency(String currency){
+            bankAccount.currency=currency;
+            return this;
+        }
+        public AccountBuilder balance(double balance){
+            bankAccount.balance=balance;
+            return this;
+        }
+        public AccountBuilder type(AccountType type){
+            bankAccount.type=type;
+            return this;
+        }
+        public AccountBuilder status(AccountStatus status){
+            bankAccount.status=status;
+            return this;
+        }
+        public BankAccount build(){
+            return this.bankAccount;
+        }
     }
 }
