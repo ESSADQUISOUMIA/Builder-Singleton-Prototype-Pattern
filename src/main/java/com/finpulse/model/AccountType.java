@@ -1,5 +1,5 @@
 package com.finpulse.model;
 
 public enum AccountType {
-    CURRENT_ACCOUNT, SAVINGS_ACCOUNT
+    CURRENT_ACCOUNT, SAVING_ACCOUNT
 }

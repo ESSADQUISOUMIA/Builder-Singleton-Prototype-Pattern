@@ -2,9 +2,12 @@ package com.finpulse.repository;
 
 import com.finpulse.model.BankAccount;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class AccountRepositoryImpl implements AccountRepository {
     private Map<Long, BankAccount> bankAccountMap=new HashMap<>();

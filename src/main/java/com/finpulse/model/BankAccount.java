@@ -73,12 +73,12 @@ public class BankAccount {
                 ", status=" + status +
                 '}';
     }
+    public static AccountBuilder builder(){
+        return new AccountBuilder();
+    }
     public static class AccountBuilder {
         private BankAccount bankAccount=new BankAccount();
 
-        public static AccountBuilder builder(){
-            return new AccountBuilder();
-        }
         public AccountBuilder accountId(Long id){
             bankAccount.accountId= id;
             return this;
